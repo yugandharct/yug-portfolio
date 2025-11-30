@@ -26,7 +26,7 @@ const Hero = () => {
       id="hero"
       className="relative pt-24 pb-24 md:pt-32 md:pb-32 overflow-hidden"  
       style={{
-        backgroundImage: `url(${import.meta.env.BASE_URL}header.jpg)`,
+        backgroundImage: `url('/header.jpg')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -45,7 +45,7 @@ const Hero = () => {
 
           <img
             ref={imgRef}
-            src={`${import.meta.env.BASE_URL}images/yugandhar.png`}
+            src="/images/yugandhar.png"
             alt="Yugandhar"
             className="w-[22rem] h-[22rem] md:w-[25.5rem] md:h-[25.5rem] rounded-full 
             object-cover shadow-2xl animate-floating transition-all duration-500
