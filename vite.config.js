@@ -4,7 +4,8 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  // No base needed for Netlify, defaults to '/'
+  // Default: '/', but override via env var for GitHub Pages builds
+  base: process.env.VITE_BASE || '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets'
