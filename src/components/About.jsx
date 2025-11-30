@@ -1,15 +1,17 @@
 import React from "react";
 
 const About = () => {
+
+  const headerBg = `${import.meta.env.BASE_URL}header.jpg`;
+
+
   return (
     <section
       id="about"
       className="py-28 relative z-10 bg-cover bg-center bg-fixed"
-      style={{ backgroundImage: "url('/header.jpg')" }}
+      style={{ backgroundImage: `url(${headerBg})` }}
     >
-      
       <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px] z-0"></div>
-
 
       {/* FLOATING PARTICLES */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
@@ -20,7 +22,6 @@ const About = () => {
       </div>
 
       <div className="relative z-20 max-w-6xl mx-auto">
-
         {/* TITLE */}
         <h2
           className="
@@ -32,54 +33,50 @@ const About = () => {
           ABOUT ME
         </h2>
 
-        
-<div className="max-w-5xl mx-auto text-lg text-gray-200 leading-relaxed mb-16 text-center">
-  <p className="mb-4">
-    I’m a Data & AI Engineer specializing in designing large-scale, resilient data
-    platforms across Telecom, Retail, and Pharma domains. I transform raw,
-    high-volume event data into analytics-ready, business-critical datasets.
-  </p>
+        <div className="max-w-5xl mx-auto text-lg text-gray-200 leading-relaxed mb-16 text-center">
+          <p className="mb-4">
+            I’m a Data & AI Engineer specializing in designing large-scale, resilient data
+            platforms across Telecom, Retail, and Pharma domains. I transform raw,
+            high-volume event data into analytics-ready, business-critical datasets.
+          </p>
 
-  <p className="mb-4">
-    I build end-to-end pipelines using Spark, PySpark, Apache Beam, Dataproc,
-    and Dataflow—focusing on cleansing, enrichment, validation, modeling, and
-    workflow automation that ensures data reliability at enterprise scale.
-  </p>
+          <p className="mb-4">
+            I build end-to-end pipelines using Spark, PySpark, Apache Beam, Dataproc,
+            and Dataflow—focusing on cleansing, enrichment, validation, modeling, and
+            workflow automation that ensures data reliability at enterprise scale.
+          </p>
 
-  <p className="mb-4">
-    With strong multi-cloud experience across GCP, AWS, and Azure, I leverage
-    BigQuery, Cloud Functions, Lambda, Glue, and Synapse to architect
-    cloud-native systems capable of processing billions of records efficiently.
-  </p>
+          <p className="mb-4">
+            With strong multi-cloud experience across GCP, AWS, and Azure, I leverage
+            BigQuery, Cloud Functions, Lambda, Glue, and Synapse to architect
+            cloud-native systems capable of processing billions of records efficiently.
+          </p>
 
-  <p className="mb-4">
-    I also build Generative AI and Agentic AI applications—including LLM-powered
-    chatbots, RAG pipelines, embedding systems, and semantic search
-    architectures. I enjoy applying ML models and analytical techniques to
-    uncover insights and build intelligent automation.
-  </p>
+          <p className="mb-4">
+            I also build Generative AI and Agentic AI applications—including LLM-powered
+            chatbots, RAG pipelines, embedding systems, and semantic search
+            architectures. I enjoy applying ML models and analytical techniques to
+            uncover insights and build intelligent automation.
+          </p>
 
-  <p className="font-semibold text-gray-100">
-    Passionate about distributed systems, AI engineering, and high-impact
-    data workflows — I deliver scalable solutions that solve real business challenges.
-  </p>
-  <p
-  className="
-    mt-8 text-gray-100 text-lg font-semibold tracking-wide
-    px-5 py-2 rounded-xl
-    bg-white/10 backdrop-blur-md
-    border border-white/20
-    shadow-md shadow-purple-500/20
-    inline-block
-  "
->
-  📍 Irving, TX, USA — Open to Relocation
-</p>
+          <p className="font-semibold text-gray-100">
+            Passionate about distributed systems, AI engineering, and high-impact
+            data workflows — I deliver scalable solutions that solve real business challenges.
+          </p>
 
-
-
-</div>
-
+          <p
+            className="
+              mt-8 text-gray-100 text-lg font-semibold tracking-wide
+              px-5 py-2 rounded-xl
+              bg-white/10 backdrop-blur-md
+              border border-white/20
+              shadow-md shadow-purple-500/20
+              inline-block
+            "
+          >
+            📍 Irving, TX, USA — Open to Relocation
+          </p>
+        </div>
 
         {/* TECHNICAL EXPERTISE */}
         <h3 className="text-3xl font-bold text-center mb-12 text-gray-100">
@@ -129,7 +126,6 @@ const About = () => {
                 "Performance & Cost Optimization"
               ]
             }
-            
           ].map((box, index) => (
             <div
               key={index}
