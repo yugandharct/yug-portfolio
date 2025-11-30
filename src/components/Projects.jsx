@@ -25,13 +25,11 @@ const Projects = () => {
     card.style.setProperty("--tilt-y", "0deg");
   };
 
-  const headerBg = `${import.meta.env.BASE_URL}header.jpg`; // from public/header.jpg
-
   return (
     <section
       id="projects"
       className="relative py-28 bg-cover bg-center bg-fixed"
-      style={{ backgroundImage: `url(${headerBg})` }}
+      style={{ backgroundImage: "url('/header.jpg')" }}
     >
       {/* DARK OVERLAY */}
       <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px] z-0"></div>
@@ -45,6 +43,7 @@ const Projects = () => {
       </div>
 
       <div className="container-max relative z-20">
+        
         {/* SECTION HEADER */}
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-4 
@@ -61,16 +60,13 @@ const Projects = () => {
           {projects.map((project) => {
             const ref = useRef(null);
 
-            // Ensure project.image respects BASE_URL.
-            // If project.image is "images/foo.png" or "/images/foo.png", this still works.
-            const projectImg = `${import.meta.env.BASE_URL}${project.image.replace(/^\//, "")}`;
-
             return (
               <div
                 key={project.id}
                 ref={ref}
                 onMouseMove={(e) => handleMouseMove(e, ref)}
                 onMouseLeave={() => handleMouseLeave(ref)}
+                
                 className="
                   tilt-card relative overflow-hidden rounded-3xl
                   bg-white/10 dark:bg-gray-800/20 
@@ -88,7 +84,7 @@ const Projects = () => {
                 {/* IMAGE */}
                 <div className="relative h-64 w-full overflow-hidden">
                   <img
-                    src={projectImg}
+                    src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover transition-all duration-700
                       group-hover:scale-110 group-hover:brightness-110"
@@ -98,6 +94,7 @@ const Projects = () => {
 
                 {/* CONTENT */}
                 <div className="p-7 space-y-5">
+
                   {/* TITLE */}
                   <h3 className="text-xl font-bold text-white group-hover:text-purple-300 transition">
                     {project.title}
@@ -107,6 +104,8 @@ const Projects = () => {
                   <p className="text-gray-300 text-sm leading-relaxed">
                     {project.description}
                   </p>
+
+                  
 
                   {/*  GITHUB ICON UNDER DESCRIPTION */}
                   {project.github && (
@@ -127,6 +126,7 @@ const Projects = () => {
                       GitHub Repo
                     </a>
                   )}
+                  
 
                   {/* TAGS */}
                   <div className="flex flex-wrap gap-2">
@@ -162,58 +162,69 @@ const Projects = () => {
                       </a>
                     )}
                   </div>
+
                 </div>
               </div>
             );
           })}
         </div>
 
-        {/* CTA — SIDE BY SIDE */}
-        <div className="text-center mt-20">
-          <p
-            className="
-              text-lg md:text-xl text-gray-200 mb-8 
-              bg-gradient-to-r from-purple-400 to-blue-400 
-              text-transparent bg-clip-text 
-              font-semibold tracking-wide
-            "
-          >
-            ✨ Let’s Talk — I'm Open to Opportunities and Collaborations
-          </p>
+          {/* CTA — SIDE BY SIDE */}
+<div className="text-center mt-20">
 
-          <div className="flex flex-col md:flex-row justify-center items-center gap-6">
-            <a
-              href="https://github.com/yugandharct"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
-                inline-flex items-center gap-3 px-7 py-3
-                bg-gradient-to-r from-purple-600 to-blue-600 text-white
-                font-semibold rounded-lg shadow-lg hover:scale-110 
-                transition-all duration-300 text-lg
-              "
-            >
-              <Github size={22} />
-              View All Projects
-            </a>
+{/* Subtitle */}
+<p
+  className="
+    text-lg md:text-xl text-gray-200 mb-8 
+    bg-gradient-to-r from-purple-400 to-blue-400 
+    text-transparent bg-clip-text 
+    font-semibold tracking-wide
+  "
+>
+  ✨ Let’s Talk — I'm Open to Opportunities and Collaborations
+</p>
 
-            <button
-              id="projects-connect-btn"
-              onClick={() =>
-                document.getElementById("contact-btn-trigger")?.click()
-              }
-              className="
-                inline-flex items-center gap-3 px-7 py-3
-                bg-gradient-to-r from-purple-600 to-blue-600 text-white
-                font-semibold rounded-lg shadow-lg
-                hover:scale-110 
-                transition-all duration-300 text-lg
-              "
-            >
-              💬 Let’s Connect
-            </button>
-          </div>
-        </div>
+<div className="flex flex-col md:flex-row justify-center items-center gap-6">
+
+  {/* GitHub CTA */}
+  <a
+    href="https://github.com/yugandharct"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      inline-flex items-center gap-3 px-7 py-3
+      bg-gradient-to-r from-purple-600 to-blue-600 text-white
+      font-semibold rounded-lg shadow-lg hover:scale-110 
+      transition-all duration-300 text-lg
+    "
+  >
+    <Github size={22} />
+    View All Projects
+  </a>
+
+  {/* CONNECT CTA (NOW VIOLET GRADIENT) */}
+  <button
+    id="projects-connect-btn"
+    onClick={() =>
+      document.getElementById("contact-btn-trigger")?.click()
+    }
+    className="
+      inline-flex items-center gap-3 px-7 py-3
+      bg-gradient-to-r from-purple-600 to-blue-600 text-white
+      font-semibold rounded-lg shadow-lg
+      hover:scale-110 
+      transition-all duration-300 text-lg
+    "
+  >
+    💬 Let’s Connect
+  </button>
+
+</div>
+
+</div>
+
+
+
       </div>
     </section>
   );

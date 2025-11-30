@@ -14,7 +14,7 @@ export const projects = [
       "LLMs"
     ],
     github: "https://github.com/yugandharct/BillInquiryBot",
-    image: "/project/Billbot.png",
+    image: "project/Billbot.png",            // 🔁 removed leading "/"
     featured: true
   },
 
@@ -33,7 +33,7 @@ export const projects = [
       "Looker"
     ],
     github: "",
-    image: "/project/RetailSalesBatch.png",
+    image: "project/RetailSalesBatch.png",   // 🔁
     featured: true
   },
 
@@ -51,7 +51,7 @@ export const projects = [
       "Streaming Pipelines"
     ],
     github: "",
-    image: "/project/Streaming.png",
+    image: "project/Streaming.png",          // 🔁
     featured: true
   },
 
@@ -70,7 +70,7 @@ export const projects = [
       "Forecasting"
     ],
     demo: "https://public.tableau.com/app/profile/yugandhar.thottempudi4168/vizzes",
-    image: "/project/Tableau.jpg",
+    image: "project/Tableau.jpg",            // 🔁
     featured: true
   }
 ];
