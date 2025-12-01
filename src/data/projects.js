@@ -32,7 +32,7 @@ export const projects = [
       "Data Modeling",
       "Looker"
     ],
-    github: "",
+    github: "https://github.com/yugandharct/RetailSalesProject",
     image: "/project/RetailSalesBatch.png",
     featured: true
   },
@@ -41,7 +41,7 @@ export const projects = [
     id: 3,
     title: "Real-Time Streaming Data Pipeline – Kafka + PySpark Streaming",
     description:
-      "Implemented a real-time order-processing streaming pipeline using Kafka, Spark Streaming, and PySpark. Enabled low-latency ingestion, streaming transformations, event validation, and near-real-time analytics workflows.",
+      "Implemented a real-time order-processing streaming pipeline using Kafka/PubSub, Spark Streaming, and PySpark. Enabled low-latency ingestion, streaming transformations, event validation, and near-real-time analytics workflows.",
     technologies: [
       "Kafka/PubSub",
       "PySpark",
@@ -50,7 +50,7 @@ export const projects = [
       "Event Processing",
       "Streaming Pipelines"
     ],
-    github: "",
+    github: "https://github.com/yugandharct/Realtime-RetailOrders",
     image: "/project/Streaming.png",
     featured: true
   },
