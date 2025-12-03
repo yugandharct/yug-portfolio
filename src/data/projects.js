@@ -41,14 +41,16 @@ export const projects = [
     id: 3,
     title: "Real-Time Streaming Data Pipeline – Kafka + PySpark Streaming",
     description:
-      "Implemented a real-time order-processing streaming pipeline using Kafka/PubSub, Spark Streaming, and PySpark. Enabled low-latency ingestion, streaming transformations, event validation, and near-real-time analytics workflows.",
+      "Implemented a real-time order-processing streaming pipeline using Kafka/PubSub, Dataflow, Apache Beam and PySpark. Enabled low-latency ingestion, streaming transformations, event validation, and near-real-time analytics workflows.",
     technologies: [
       "Kafka/PubSub",
+      "DataFlow",
+      "DataProc",
+      "Apache Beam",
       "PySpark",
-      "Spark Streaming",
-      "Real-time ETL",
+      "Real-time Streaming ETL",
       "Event Processing",
-      "Streaming Pipelines"
+      "BigQuery"
     ],
     github: "https://github.com/yugandharct/Realtime-RetailOrders",
     image: "/project/Streaming.png",
