@@ -15,6 +15,7 @@ export const projects = [
     ],
     github: "https://github.com/yugandharct/BillInquiryBot",
     image: "/project/Billbot.png",
+    status: "wip",
     featured: true
   },
 

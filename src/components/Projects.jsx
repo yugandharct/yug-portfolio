@@ -106,6 +106,18 @@ const Projects = () => {
                   </p>
 
                   
+                  {/* WIP BADGE */}
+                  {project.status === "wip" && (
+                    <span
+                      className="
+                        inline-block px-3 py-1 mb-2 rounded-full text-xs font-semibold
+                        bg-yellow-500/20 text-yellow-300 border border-yellow-400/30
+                        backdrop-blur-sm
+                      "
+                    >
+                      🚧 Work in Progress
+                    </span>
+                  )}
 
                   {/*  GITHUB ICON UNDER DESCRIPTION */}
                   {project.github && (
@@ -114,12 +126,12 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="
-                        inline-flex items-center gap-2 px-4 py-2 rounded-lg 
-                        bg-white/10 border border-white/20
-                        text-white text-sm
-                        transition-all duration-300
-                        hover:bg-white/20 hover:scale-110
-                        shadow-md
+                      inline-flex items-center gap-2 px-4 py-2 rounded-lg
+                      bg-gradient-to-r from-purple-600 to-blue-600
+                      text-white text-sm font-medium
+                      shadow-lg shadow-purple-500/30
+                      transition-all duration-300
+                      hover:scale-110 hover:shadow-purple-500/50
                       "
                     >
                       <Github size={18} />
